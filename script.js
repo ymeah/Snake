@@ -16,14 +16,16 @@ let direction = "right";
 let score = 0;
 let highScore = 0;
 
+
+
 function keyHandler(e) {
-  if (e.key === "ArrowRight") {
+  if (e.key === "ArrowRight" && direction !== "left") {
     direction = "right";
-  } else if (e.key === "ArrowLeft") {
+  } else if (e.key === "ArrowLeft" && direction !== "right") {
     direction = "left";
   } else if (e.key === "ArrowDown" && direction !== "up") {
     direction = "down";
-  } else if (e.key === "ArrowUp") {
+  } else if (e.key === "ArrowUp" && direction !== "down") {
     direction = "up";
   }
 }
